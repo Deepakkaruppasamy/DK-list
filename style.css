@@ -1,0 +1,142 @@
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: url('bg.jpg') no-repeat center center;
+    background-size: cover;
+    animation: moveBackground 10s linear infinite;
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px 30px 70px;
+    margin: 100px auto 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: #ffa545;
+    padding: 16px 50px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(/images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #555;
+}
+
+ul li.checked::before {
+    background-image: url(/images/checked.png);
+}
+
+ul li.important {
+    background-color: #ffeb3b;
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    cursor: pointer;
+}
+
+ul li .edit-btn, ul li .important-btn {
+    margin-left: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul li .important-btn {
+    background: #ff5722;
+}
+
+.row button {
+    margin: 5px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.row button:hover {
+    background: #0056b3;
+}
